@@ -1,2 +1,11 @@
 <h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<hr>
+<%=link_to "List Restaurants", restaurants_path, class: "btn btn-primary" %>
+<hr>
+<p>name: <%= @restaurant.name %></p>
+<p>address: <%= @restaurant.address %></p>
+<p>phone: <%= @restaurant.phone_number %></p>
+<p>category: <%= @restaurant.category %></p>
+<hr>
+<%= link_to "Add Review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+<%= link_to "Check Reviews", restaurant_reviews_path(@restaurant), class: "btn btn-primary" %>
